@@ -1,0 +1,32 @@
+1:
+export OMP_NUM_THREADS=5
+g++ pdc1.c -o pdc1.exe -fopenmp
+./pdc1.exe
+
+2:
+mpicc PDC2.c -o pdc2.out
+mpiexec -np 4 ./pdc2.out
+
+3.1:
+javac Server.java
+java Server
+
+javac Client.java
+java Client
+
+3.2:
+javac *.java
+rmic AdderRemote
+rmiregistry 5000
+
+java MyServer
+java MyClient
+
+7.1:
+javac Bully.java
+java Bully
+
+7.2:
+javac Ring.java
+java Ring
+
